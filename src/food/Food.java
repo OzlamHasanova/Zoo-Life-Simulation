@@ -1,13 +1,26 @@
 package food;
 
 public enum Food {
-       HAY(5);
-       private final int quantity;
+    HAY(1, 4),
+    STEAK(3, 4),
+    FRUIT(2, 3),
+    CELERY(0, 1),
+    FISH(3, 2),
+    ICE_CREAM(1, 3);
 
-    Food(int quantity) {
-        this.quantity = quantity;
+    private final int health;
+    private final int waste;
+
+    Food(int health, int waste) {
+        this.health = health;
+        this.waste = waste;
     }
-    public int getQuantity(){
-        return quantity;
+
+    public int getHealth() {
+        return health;
+    }
+
+    public int getWaste() {
+        return waste;
     }
 }
